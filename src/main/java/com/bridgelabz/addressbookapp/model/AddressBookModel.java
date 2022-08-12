@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 
 @Entity
 @Data
-@Table(name = "AddressBook")
+@Table(name = "addressbook")
 public class AddressBookModel {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
