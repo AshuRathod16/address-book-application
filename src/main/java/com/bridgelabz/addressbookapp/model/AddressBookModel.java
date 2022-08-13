@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 
 @Entity
 @Data
-@Table(name = "addressbook")
+@Table(name = "Addressbook")
 public class AddressBookModel {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -20,7 +20,7 @@ public class AddressBookModel {
     private long phoneNumber;
     private int zip;
     private LocalDateTime registerDate;
-    private LocalDateTime updateDate;
+    private LocalDateTime updatedDate;
 
     public AddressBookModel(AddressBookDTO addressBookDTO) {
         this.firstName = addressBookDTO.getFirstName();
@@ -34,4 +34,6 @@ public class AddressBookModel {
 
     public AddressBookModel() {
     }
+
+
 }
