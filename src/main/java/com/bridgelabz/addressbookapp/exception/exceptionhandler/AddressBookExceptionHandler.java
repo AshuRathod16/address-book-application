@@ -2,7 +2,6 @@ package com.bridgelabz.addressbookapp.exception.exceptionhandler;
 
 import com.bridgelabz.addressbookapp.exception.AddressBookException;
 import com.bridgelabz.addressbookapp.util.ResponseUtil;
-import org.aspectj.weaver.patterns.IToken;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
