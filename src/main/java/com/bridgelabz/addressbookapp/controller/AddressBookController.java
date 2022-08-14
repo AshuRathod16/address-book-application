@@ -4,6 +4,7 @@ package com.bridgelabz.addressbookapp.controller;
 import com.bridgelabz.addressbookapp.dto.AddressBookDTO;
 import com.bridgelabz.addressbookapp.model.AddressBookModel;
 import com.bridgelabz.addressbookapp.service.IAddressBookService;
+import com.bridgelabz.addressbookapp.util.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -26,8 +27,8 @@ public class AddressBookController {
     }
 
     @GetMapping("/getemployees")
-    public List<AddressBookModel> getEmployees() {
-        return addressBookService.getEmployees();
+    public List<AddressBookModel> getEmployees(@RequestHeader String token) {
+        return addressBookService.getEmployees(token);
     }
 
     @DeleteMapping("/deletecontact/{id}")
@@ -38,5 +39,10 @@ public class AddressBookController {
     @GetMapping("/getemployee/{id}")
     public AddressBookModel getEmployee(@PathVariable Long id) {
         return addressBookService.getEmployee(id);
+    }
+
+    @PostMapping("/login")
+    public ResponseUtil login(@RequestParam String emailId, @RequestParam String password) {
+        return addressBookService.login(emailId, password);
     }
 }

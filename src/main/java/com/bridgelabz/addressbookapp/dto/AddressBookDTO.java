@@ -11,6 +11,6 @@ public class AddressBookDTO {
     private String state;
     private long phoneNumber;
     private int zip;
-
-
+    private String emailId;
+    private String password;
 }
